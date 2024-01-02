@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 d-flex align-items" *ngFor="let x of varapi">
+      <!-- <div class="card my-2">
+        <img width="100%" height="50%" [src]="x.image" alt="{{ x.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ x.title }}</h5>
+          <p class="card-text"><b>Description: </b> {{ x.description }} </p>
+          <p class="card-text"><b>Price: </b> ${{ x.price }}</p> -->
+      <!-- Add to Cart button -->
+      <!-- <button class="btn btn-primary">Add to Cart</button> -->
+      <!-- <a href="#" class="btn btn-success"><fa-icon [icon]="icon1"></fa-icon></a> -->
+      <!-- More Details button -->
+      <!-- <button class="btn btn-secondary" [routerLink]="['']">View Details</button> -->
+      <!-- <a href="#" class="btn btn-primary mx-3" [routerLink]="['']">View Details</a>
+        </div>
+      </div> -->
+      <div class="card my-3" style="width: 25rem; ">
+        <div class="card-header text-center">
+          <img class="card-img-top" [src]="x.image" alt="{{ x.title }}" />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ x.title }}</h5>
+          <p class="card-text"><b>Description: </b> {{ x.description }} </p>
+          <p class="card-text"><b>Price: </b> ${{ x.price }}</p>
+          <button class="btn btn-success" (click)="addTocart(x)"><fa-icon [icon]="icon1"></fa-icon></button>
+          <button class="btn btn-primary mx-3" [routerLink]="['details',x.id]">View
+            Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
