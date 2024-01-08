@@ -11,7 +11,19 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link active-link" aria-current="page" [routerLink]="['']">
-              <fa-icon [icon]="icon2"></fa-icon> Products</a>
+              List Products</a>
+          </li>
+          <li class="nav-item my-1">
+            <!-- <a class="nav-link active-link" aria-current="page" [routerLink]="['cartproduct']">
+              <fa-icon [icon]="icon2"></fa-icon>cart Products</a> -->
+            <a type="button" class="btn btn-success position-relative   " aria-current="page"
+              [routerLink]="['cartproduct']">
+              <fa-icon [icon]="icon2"></fa-icon>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{cartitemcount}}
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </a>
           </li>
         </ul>
       </div>

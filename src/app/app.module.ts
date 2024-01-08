@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListproductComponent } from './listproduct/listproduct.component';
 import { DitalsComponent } from './ditals/ditals.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CartproductsComponent } from './cartproducts/cartproducts.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppComponent,
     ListproductComponent,
     DitalsComponent,
+    CartproductsComponent,
 
 
 

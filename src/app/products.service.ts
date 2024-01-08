@@ -55,6 +55,7 @@ addTocart(item:Product){
 //   }
 getProductById(id: number): Observable<Product> {
   return this.http.get<Product>(`${this.apiUrl}/${id}`);
+  // return this.http.get<Product>('https://fakestoreapi.com/products/'+id.toString())
 }
 
 

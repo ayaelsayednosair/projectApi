@@ -11,7 +11,7 @@
       <!-- <button class="btn btn-primary">Add to Cart</button> -->
       <!-- <a href="#" class="btn btn-success"><fa-icon [icon]="icon1"></fa-icon></a> -->
       <!-- More Details button -->
-      <!-- <button class="btn btn-secondary" [routerLink]="['']">View Details</button> -->
+
       <!-- <a href="#" class="btn btn-primary mx-3" [routerLink]="['']">View Details</a>
         </div>
       </div> -->
@@ -23,8 +23,8 @@
           <h5 class="card-title">{{ x.title }}</h5>
           <p class="card-text"><b>Description: </b> {{ x.description }} </p>
           <p class="card-text"><b>Price: </b> ${{ x.price }}</p>
-          <button class="btn btn-success" (click)="addTocart(x)"><fa-icon [icon]="icon1"></fa-icon></button>
-          <button class="btn btn-primary mx-3" [routerLink]="['details',x.id]">View
+          <button class="btn btn-success" (click)=" addTOcart(x)"><fa-icon [icon]="icon1"></fa-icon></button>
+          <button class="btn btn-primary mx-3" [routerLink]="['details', x.id]">View
             Details</button>
         </div>
       </div>

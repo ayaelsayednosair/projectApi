@@ -10,11 +10,13 @@ import { Observable } from 'rxjs';
   templateUrl: './ditals.component.html',
   styleUrls: ['./ditals.component.css']
 })
-export class DitalsComponent implements OnInit{
+export class DitalsComponent {
   // route: ActivatedRoute = inject(ActivatedRoute);
   // ProductsServe:ProductsService=inject(ProductsService);
   // Product!:Product|undefined;
-  product: Product | undefined;
+  id!:number
+  Product!:Observable<Product>;
+  // product: Product | undefined;
 
   constructor(private productService: ProductsService , private route: ActivatedRoute) {
 
@@ -22,27 +24,28 @@ export class DitalsComponent implements OnInit{
 
   }
 
-  ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.productService.getProductById(params['productId']).subscribe(
-        (data: Product) => {
-          this.product = data;
-          console.log('Product details:', this.product);
-        },
-        error => {
-          console.error('Error fetching product details:', error);
-        }
-      );
-    });
+  ngOnInit():void {
+  //   this.route.params.subscribe(params => {
+  //     this.productService.getProductById(params['productId']).subscribe(
+  //       (data: Product) => {
+  //         this.product = data;
+  //         console.log('Product details:', this.product);
+  //       },
+  //       error => {
+  //         console.error('Error fetching product details:', error);
+  //       }
+  //     );
+  this.id = Number(this.route.snapshot.params['id']);
+  this.Product=this.productService.getProductById(this.id);
+    };
 
   }
 
- getProduct(id: number) {
-
-  }
 
 
 
 
 
-}
+
+
+
